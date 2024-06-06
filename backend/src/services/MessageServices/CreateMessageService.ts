@@ -26,7 +26,7 @@ const CreateMessageService = async ({
   companyId
 }: Request): Promise<Message> => {
 
-  if (messageData.id == lestestMessageId) {//validação criada para corrigir bug de conversa entre zappfy que nao estava salvando corretamente as mansagens dos chat
+  if (messageData.id == lestestMessageId) {
     const newMessageId = crypto.randomBytes(15).toString('hex').toUpperCase();
     messageData.id = newMessageId.toString();
   }
